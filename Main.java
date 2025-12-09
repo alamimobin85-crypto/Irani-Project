@@ -7,15 +7,17 @@ public class Main
     public static void main(String[] args)
     {
         Scanner input = new Scanner(System.in);
-        int s=0;
-        int A=1;
-        for(int x=1;x<=99;x=x+2)
+        double s=0.0;
+        int a=1;
+        int b=20;
+        while(a<=20&&b>=1)
         {
-            s=(A*x)+s;
-            A=-A;
-        }
-        System.out.print(s);
+            s=(a/b)+s;
+            a++;
+            b--;
 
+        }//end of while
+        System.out.println(s);
 
     }//end of main
 }//end of class
