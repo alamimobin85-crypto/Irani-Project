@@ -7,17 +7,23 @@ public class Main
     public static void main(String[] args)
     {
         Scanner input = new Scanner(System.in);
-        int s=0;
-        int A=1;
-        for(int x=1;x<=100;x++)
+        int mox1=0;
+        int mox2=0;
+        int A[]=new int[100];
+        for(int x=0;x<100;x++)
         {
-            s=(A*x)+s;
-            A=-A;
+            A[x]=input.nextInt();
+            if(A[x]>mox2&&A[x]<mox1)
+                mox2=A[x];
+            if(A[x]>mox1)
+                {
+                    mox2=mox1;
+                    mox1=A[x];
 
-        }
-        System.out.println(s);
+                }//end of if
 
-
+        }//end of for
+        System.out.println("Mox 2: "+mox2);
 
     }//end of main
 }//end of class
