@@ -7,16 +7,22 @@ public class Main
     public static void main(String[] args)
     {
         Scanner input = new Scanner(System.in);
-        int s=0;
-        int A=1;
-        for(int x=1;x<=100;x++)
+        int n = input.nextInt();
+        int a=0;
+        int b=1;
+        int c=0;
+        if(n==a&&n==b)
+            System.out.println("YES");
+        while(a+b<=n)
         {
-            s=(A*x)+s;
-            A=-A;
-
-        }
-        System.out.println(s);
-
+            c=a+b;
+            a=b;
+            b=c;
+        }//end of for
+        if(c==n)
+            System.out.println("yes");
+        else
+            System.out.println("no");
 
 
     }//end of main
