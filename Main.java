@@ -7,15 +7,20 @@ public class Main
     public static void main(String[] args)
     {
         Scanner input = new Scanner(System.in);
+        int n=input.nextInt();
         int s=0;
-        int A=1;
-        for(int x=1;x<=100;x++)
-        {
-            s=(A*x)+s;
-            A=-A;
-
-        }
-        System.out.println(s);
+        if(n>=100)
+        for(int x=10;x<99;x++)
+            if(n%x==0)
+                s=x+s;
+        if(n>=10&&n<100)
+            for(int x=10;x<n;x++)
+                if(n%x==0)
+                    s=x+s;
+        if(s>0)
+            System.out.print(s);
+        if(n<10)
+            System.out.print("eror");
 
 
 
