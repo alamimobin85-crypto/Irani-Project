@@ -7,17 +7,20 @@ public class Main
     public static void main(String[] args)
     {
         Scanner input = new Scanner(System.in);
-        int s=0;
-        int A=1;
-        for(int x=1;x<=100;x++)
+        int n = input.nextInt();
+        int Q=2;
+        while(n>1)
         {
-            s=(A*x)+s;
-            A=-A;
-
-        }
-        System.out.println(s);
-
-
+            int p=0;
+            while(n%Q==0)
+            {
+                n=n/Q;
+                p=p+1;
+            }//end of while 1_1
+            if(p>0)
+                System.out.print(Q+"^"+p+"*");
+            Q=Q+1;
+        }//end of while1
 
     }//end of main
-}//end of class
+}//end of calss
