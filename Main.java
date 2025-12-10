@@ -7,16 +7,25 @@ public class Main
     public static void main(String[] args)
     {
         Scanner input = new Scanner(System.in);
-        int s=0;
-        int A=1;
-        for(int x=1;x<=100;x++)
+        int A[]=new int[100];
+        for(int x=0;x<10;x++)
+            A[x]=input.nextInt();
+
+        for(int x=0;x<100;x++)
         {
-            s=(A*x)+s;
-            A=-A;
+            int a=A[x];
+            int s=0;
+            int d=0;
+            while(A[x]>0)
+            {
+                d=A[x]%10;
+                s=(s*10)+d;
+                A[x]=A[x]/10;
 
-        }
-        System.out.println(s);
-
+            }//end of while
+            if(s==a)
+                System.out.println(a);
+        }//end of for
 
 
     }//end of main
