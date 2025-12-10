@@ -7,17 +7,14 @@ public class Main
     public static void main(String[] args)
     {
         Scanner input = new Scanner(System.in);
-        int s=0;
-        int A=1;
-        for(int x=1;x<=100;x++)
+        for(int x=1;x<1000;x++)
         {
-            s=(A*x)+s;
-            A=-A;
-
-        }
-        System.out.println(s);
-
-
-
+            int c = 0;
+            for (int y = 1; y <= x; y++)
+                if (x % y == 0)
+                    c++;
+            if (c == 2)
+                System.out.println(x);
+        }//end of for
     }//end of main
 }//end of class
